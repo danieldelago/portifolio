@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tela de Login</title>
+</head>
+
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça Login <br>E entre para o nosso time</h1>
+            <img src="images/security.png" class="img-left" alt="security">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" placeholder="Usuário" id="usuario">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Senha" id="senha">
+                </div>
+                <button class="btn-login" onclick="logar()">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logar() {
+            var usuario = document.getElementById('usuario').value;
+            var senha = document.getElementById('senha').value;
+            if (usuario == "gamer" && senha == "12345") {
+                alert("Acesso Liberado!");
+                location.href = "../../teste/home.html"
+            } else {
+                alert("Acesso não permitido! Dados incorretos!")
+            }
+        }
+    </script>
+</body>
+
+</html>
